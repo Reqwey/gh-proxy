@@ -1,11 +1,6 @@
-name = "worker-typescript-template"
-type = "javascript"
-zone_id = ""
-account_id = ""
-route = ""
+name = "github"
 workers_dev = true
+main = "./dist/worker.js"
 
 [build]
-command = "npm install && npm run build"
-[build.upload]
-format = "service-worker"
+command = "yarn build"
