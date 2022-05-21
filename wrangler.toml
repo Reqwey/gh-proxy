@@ -1,4 +1,3 @@
-name = "github"
 workers_dev = true
 main = "./dist/worker.js"
 
