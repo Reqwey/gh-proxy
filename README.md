@@ -1,39 +1,35 @@
-# ʕ •́؈•̀) `worker-typescript-template`
+# GitHub Proxy
 
-A batteries included template for kick starting a TypeScript Cloudflare worker project.
+**English** | [中文](./README.zh.md)
 
-## Note: You must use [wrangler](https://developers.cloudflare.com/workers/cli-wrangler/install-update) 1.17 or newer to use this template.
+[![Check and Deploy](https://github.com/prprnya/gh-proxy/actions/workflows/wrangler.yml/badge.svg)](https://github.com/prprnya/gh-proxy/actions/workflows/wrangler.yml)
 
-## 🔋 Getting Started
+Proxy GitHub assets throuth [jsDelivr](https://jsdelivr.com), deploy on [Cloudflare Workers](https://workers.cloudflare.com).
 
-This template is meant to be used with [Wrangler](https://github.com/cloudflare/wrangler). If you are not already familiar with the tool, we recommend that you install the tool and configure it to work with your [Cloudflare account](https://dash.cloudflare.com). Documentation can be found [here](https://developers.cloudflare.com/workers/tooling/wrangler/).
+## Usage
 
-To generate using Wrangler, run this command:
+Copy the following text to your browser or terminal:
 
-```bash
-wrangler generate my-ts-project https://github.com/cloudflare/worker-typescript-template
+```text
+https://github.ruavan.com?url=
 ```
 
-### 👩 💻 Developing
+or
 
-[`src/index.ts`](./src/index.ts) calls the request handler in [`src/handler.ts`](./src/handler.ts), and will return the [request method](https://developer.mozilla.org/en-US/docs/Web/API/Request/method) for the given request.
+```text
+https://gh.ruaa.cc?url=
+```
 
-### 🧪 Testing
+then paste before the URL to proxy.
 
-This template comes with jest tests which simply test that the request handler can handle each request method. `npm test` will run your tests.
+## Support URLs
 
-### ✏️ Formatting
+> Written as ~~unscrict~~ **RegExp** pattern
 
-This template uses [`prettier`](https://prettier.io/) to format the project. To invoke, run `npm run format`.
+- `(https?://)?github.com/user/repo/(blob|raw|releases|archive)/branch/path/to/file`
+- `(https?://)?(raw|gist).github(usercontent)?.com/user/repo/path/to/file`
 
-### 👀 Previewing and Publishing
+## Credits
 
-For information on how to preview and publish your worker, please see the [Wrangler docs](https://developers.cloudflare.com/workers/tooling/wrangler/commands/#publish).
-
-## 🤢 Issues
-
-If you run into issues with this specific project, please feel free to file an issue [here](https://github.com/cloudflare/worker-typescript-template/issues). If the problem is with Wrangler, please file an issue [here](https://github.com/cloudflare/wrangler/issues).
-
-## ⚠️ Caveats
-
-The `service-worker-mock` used by the tests is not a perfect representation of the Cloudflare Workers runtime. It is a general approximation. We recommend that you test end to end with `wrangler dev` in addition to a [staging environment](https://developers.cloudflare.com/workers/tooling/wrangler/configuration/environments/) to test things before deploying.
+- [**hunshcn**/gh-proxy](https://github.com/hunshcn/gh-proxy)
+- [**EtherDream**/jsproxy](https://github.com/EtherDream/jsproxy)
