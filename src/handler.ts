@@ -8,7 +8,7 @@ export async function handleRequest(request: Request): Promise<Response> {
   if (requestURL.pathname !== '/') {
     throw new Error('Not implemented')
   } else if (queryURL === null) {
-    return new Response(`${HOMEPAGE}`, { status: 301 })
+    return Response.redirect(`${HOMEPAGE}`, 301)
   } else if (Object.values(GITHUB_URL_REGEX).some((re) => re.test(queryURL))) {
     return new Response(`${queryURL}`)
   } else {
