@@ -1,22 +1,13 @@
-name: Test and Deploy
-on: [push, pull_request]
+name: Check and Deploy
+on: [push]
 
 jobs:
-  test:
-    name: ESLint and UnitTest
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          cache: yarn
-      - run: yarn
-      - run: yarn lint
-      - run: yarn test
+  check:
+    uses: ./.github/workflows/check.yml
 
   deploy:
     name: Deploy to Cloudflare
-    needs: test
+    needs: check
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
