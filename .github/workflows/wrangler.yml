@@ -1,7 +1,9 @@
+name: Test and Deploy
 on: [push, pull_request]
 
 jobs:
   test:
+    name: ESLint and UnitTest
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -13,6 +15,7 @@ jobs:
       - run: yarn test
 
   deploy:
+    name: Deploy to Cloudflare
     needs: test
     runs-on: ubuntu-latest
     steps:
@@ -22,7 +25,8 @@ jobs:
           cache: yarn
       - run: yarn global add wrangler
       - run: yarn
-      - run: |
+      - name: Run wrangler publish
+        run: |
           wrangler publish \
             --name=${{ secrets.CLOUDFLARE_WORKER_NAME }} \
             --compatibility-date=$(date -I)
