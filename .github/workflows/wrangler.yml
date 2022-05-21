@@ -8,10 +8,12 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           cache: yarn
+      - run: yarn
       - run: yarn lint
       - run: yarn test
 
   deploy:
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -19,7 +21,9 @@ jobs:
         with:
           cache: yarn
       - run: yarn global add wrangler
+      - run: yarn
       - run: wrangler login
         env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
       - run: wrangler publish --compatibility-date=$(date -I)
