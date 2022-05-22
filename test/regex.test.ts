@@ -5,7 +5,7 @@ test('GITHUB_URL_BLOB', () => {
     .flatMap((protocol) =>
       ['blob', 'raw'].flatMap((part) =>
         ['file', 'file.ext', 'path/to/file', 'path/to/file.ext'].flatMap(
-          (path) => `${protocol}github.com/user/repo/${part}/root/${path}`,
+          (path) => `${protocol}github.com/user/repo/${part}/version/${path}`,
         ),
       ),
     )
@@ -17,7 +17,7 @@ test('GITHUB_URL_RELEASE', () => {
     .flatMap((protocol) =>
       ['releases', 'archive'].flatMap((part) =>
         ['file', 'file.ext', 'path/to/file', 'path/to/file.ext'].flatMap(
-          (path) => `${protocol}github.com/user/repo/${part}/root/${path}`,
+          (path) => `${protocol}github.com/user/repo/${part}/version/${path}`,
         ),
       ),
     )
@@ -29,7 +29,8 @@ test('GITHUB_REGEX_RAW', () => {
     .flatMap((protocol) =>
       ['usercontent', ''].flatMap((part) =>
         ['file', 'file.ext', 'path/to/file', 'path/to/file.ext'].flatMap(
-          (path) => `${protocol}raw.github${part}.com/user/repo/root/${path}`,
+          (path) =>
+            `${protocol}raw.github${part}.com/user/repo/version/${path}`,
         ),
       ),
     )
@@ -41,7 +42,8 @@ test('GITHUB_REGEX_GIST', () => {
     .flatMap((protocol) =>
       ['usercontent', ''].flatMap((part) =>
         ['file', 'file.ext', 'path/to/file', 'path/to/file.ext'].flatMap(
-          (path) => `${protocol}gist.github${part}.com/user/repo/root/${path}`,
+          (path) =>
+            `${protocol}gist.github${part}.com/user/repo/version/${path}`,
         ),
       ),
     )
