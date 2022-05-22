@@ -9,7 +9,7 @@ test('GITHUB_URL_BLOB', () => {
         ),
       ),
     )
-    .forEach((url) => expect(GITHUB_URL_REGEX.BLOB.test(url)).toBeTruthy())
+    .forEach((url) => expect(url).toMatch(GITHUB_URL_REGEX.BLOB))
 })
 
 test('GITHUB_URL_RELEASE', () => {
@@ -21,7 +21,7 @@ test('GITHUB_URL_RELEASE', () => {
         ),
       ),
     )
-    .forEach((url) => expect(GITHUB_URL_REGEX.RELEASE.test(url)).toBeTruthy())
+    .forEach((url) => expect(url).toMatch(GITHUB_URL_REGEX.RELEASE))
 })
 
 test('GITHUB_REGEX_RAW', () => {
@@ -33,7 +33,7 @@ test('GITHUB_REGEX_RAW', () => {
         ),
       ),
     )
-    .forEach((url) => expect(GITHUB_URL_REGEX.RAW.test(url)).toBeTruthy())
+    .forEach((url) => expect(url).toMatch(GITHUB_URL_REGEX.RAW))
 })
 
 test('GITHUB_REGEX_GIST', () => {
@@ -45,5 +45,5 @@ test('GITHUB_REGEX_GIST', () => {
         ),
       ),
     )
-    .forEach((url) => expect(GITHUB_URL_REGEX.GIST.test(url)).toBeTruthy())
+    .forEach((url) => expect(url).toMatch(GITHUB_URL_REGEX.GIST))
 })
