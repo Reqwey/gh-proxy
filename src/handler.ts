@@ -41,7 +41,7 @@ async function proxy(url: string, init: RequestInit): Promise<Response> {
   const response = await fetch(url, init)
   const status = response.status
 
-  return new Response(response.body, {
+  return new Response(await response.blob(), {
     status,
   })
 }
