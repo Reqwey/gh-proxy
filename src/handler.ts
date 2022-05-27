@@ -10,9 +10,7 @@ export async function handleRequest(request: Request): Promise<Response> {
   const requestURL = new URL(request.url)
   const queryURL = requestURL.searchParams.get(QUERY_KEY)
 
-  if (requestURL.pathname !== '/') {
-    return new Response(null, { status: 204 })
-  } else if (queryURL === null) {
+  if (queryURL === null) {
     return Response.redirect(`${HOMEPAGE}`, 301)
   } else if (Object.values(GITHUB_URL_REGEX).some((re) => re.test(queryURL))) {
     return httpHandler(request, formatURL(queryURL))
