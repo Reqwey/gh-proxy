@@ -14,11 +14,10 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           cache: yarn
-      - run: yarn global add wrangler
       - run: yarn
       - name: Run wrangler publish
         run: |
-          wrangler publish \
+          npx wrangler publish \
             --name=${{ secrets.CLOUDFLARE_WORKER_NAME }} \
             --compatibility-date=$(date -I)
         env:
