@@ -11,7 +11,7 @@
 复制以下文本到浏览器或控制台：
 
 ```text
-https://github.ruavan.com?url=
+https://api.ruavan.net/gh?url=
 ```
 
 或

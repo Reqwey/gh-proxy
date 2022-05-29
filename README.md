@@ -11,7 +11,7 @@ Proxy GitHub assets throuth [jsDelivr](https://jsdelivr.com), deploy on [Cloudfl
 Copy the following text to your browser or terminal:
 
 ```text
-https://api.ruavan.com/gh?url=
+https://api.ruavan.net/gh?url=
 ```
 
 or
