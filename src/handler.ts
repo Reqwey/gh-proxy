@@ -6,7 +6,9 @@ import {
 } from './lib/constants'
 import { formatURL } from './lib/utils'
 
-export async function handleRequest(request: Request): Promise<Response> {
+export default async function handleRequest(
+  request: Request,
+): Promise<Response> {
   const requestURL = new URL(request.url)
   const queryURL = requestURL.searchParams.get(QUERY_KEY)
 
