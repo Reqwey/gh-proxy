@@ -13,11 +13,11 @@ jobs:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
-          cache: yarn
-      - run: yarn
+          cache: pnpm
+      - run: pnpm install
       - name: Run wrangler publish
         run: |
-          npx wrangler publish \
+          pnpm exec wrangler publish \
             --name=${{ secrets.CLOUDFLARE_WORKER_NAME }} \
             --compatibility-date=$(date -I)
         env:
