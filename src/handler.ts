@@ -13,7 +13,7 @@ export default async function handleRequest(
   const queryURL = requestURL.searchParams.get(QUERY_KEY)
 
   if (queryURL === null) {
-    return Response.redirect(`${HOMEPAGE}`, 301)
+    return Response.redirect(`${HOMEPAGE}`, 302)
   } else if (Object.values(GITHUB_URL_REGEX).some((re) => re.test(queryURL))) {
     return httpHandler(request, formatURL(queryURL))
   } else {
