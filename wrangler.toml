@@ -2,4 +2,4 @@ workers_dev = true
 main = "./dist/worker.js"
 
 [build]
-command = "yarn build"
+command = "pnpm build"
