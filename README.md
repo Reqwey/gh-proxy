@@ -20,6 +20,12 @@ or
 https://gh.ruaa.cc?url=
 ```
 
+or
+
+```text
+https://gh.reqwey.com?url=
+```
+
 then paste before the URL to proxy.
 
 ## Support URLs
@@ -33,3 +39,4 @@ then paste before the URL to proxy.
 
 - [**hunshcn**/gh-proxy](https://github.com/hunshcn/gh-proxy)
 - [**EtherDream**/jsproxy](https://github.com/EtherDream/jsproxy)
+- 
