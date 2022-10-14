@@ -23,7 +23,7 @@ https://gh.ruaa.cc?url=
 or
 
 ```text
-https://gh.reqwey.com?url=
+https://gh-data.reqwey.com?url=
 ```
 
 then paste before the URL to proxy.
