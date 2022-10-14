@@ -1,4 +1,4 @@
-export const HOMEPAGE = 'https://github.com/Reqwey/gh-proxy'
+export const HOMEPAGE = 'https://gh.reqwey.com/Reqwey/gh-proxy'
 export const QUERY_KEY = 'url'
 
 export const GITHUB_URL_REGEX: { [key: string]: RegExp } = {
