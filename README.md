@@ -2,7 +2,7 @@
 
 **English** | [中文](./README.zh.md)
 
-[![Check and Deploy](https://github.com/prprnya/gh-proxy/actions/workflows/wrangler.yml/badge.svg)](https://github.com/prprnya/gh-proxy/actions/workflows/wrangler.yml)
+[![Check and Deploy](https://github.com/Reqwey/gh-proxy/actions/workflows/wrangler.yml/badge.svg)](https://github.com/Reqwey/gh-proxy/actions/workflows/wrangler.yml)
 
 Proxy GitHub assets throuth [jsDelivr](https://jsdelivr.com), deploy on [Cloudflare Workers](https://workers.cloudflare.com).
 
